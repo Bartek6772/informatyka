@@ -1,0 +1,264 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f0;
+}
+
+
+/* NAVBAR */
+.navbar{
+    width: 100%;
+    height: 72.8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 8px #000;
+    z-index: 200;
+}
+
+.navbar > .container{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-links{
+    width: 35%;
+    height: 72.8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links a{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 90px;
+}
+
+.nav-links a::after{
+    content: " ";
+    position: absolute;
+    background-color: #023353;
+    width: 0;
+    height: 4px;
+    left: 0;
+    bottom: 10px;
+    transition: all 0.25s;
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+
+/* OTHER */
+.section{
+    /* box-shadow: 0px 5px 100px #000; */
+    /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 1); */
+}
+
+.section h2{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-top: 40px;
+}
+
+.content > .container{
+    width: 100%;
+    position: absolute;
+    top: 70vh;
+    left: 0; 
+    z-index: 100;
+    background-color: #f0f0f0;
+}
+
+.content .space{
+    width: 100%;
+    height: 400px;
+    background-image: url("./../img/lol.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    /* box-shadow: 0px 2px 8px rgba(0, 0, 0, 1); */
+}
+.parallax-mirror{ z-index: 150 !important; }
+
+
+/* SECTION START */
+.start{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70vh;
+    
+    overflow: auto;
+    position: relative;
+
+    background-color: #000;
+}
+
+.start .overlay{
+    width: 100%;
+    height: 100%;
+
+    background-image: url('./../img/10.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+.start h1{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 35vh;
+    z-index: 50;
+
+    color: #fff;
+    font-size: 3.2rem;
+    text-align: center;
+    text-shadow: 0px 0px 10px #000;
+    text-transform: uppercase;
+}
+
+
+/* SECTION OFFER */
+.offer{
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.offer .container{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.block{
+    width: 550px;
+    height: 300px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 8px #000;
+    cursor: pointer;
+}
+
+.block .image{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center;
+    
+    transition: all 0.2s linear;
+}
+.block:hover .image{ height: 20%; }
+
+.block .image img{
+    width: 100%;
+    height: auto;
+}
+
+.block .text{
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    position: relative;
+}
+
+.block .text h3{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.additional,
+.price{
+    position: absolute;
+    bottom: 20px;
+}
+
+.additional{
+    left: 20px;
+    color: green;
+}
+.price {
+    right: 20px;
+    font-weight: bold;
+}
+
+
+/* SECTION ABOUT */
+.about{
+    padding-bottom: 100px;
+}
+
+.about .container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about p{
+    width: 50%;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.about img{
+    width: 40%;
+    height: auto;
+}
+
+
+/* FOOTER */
+footer{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+footer .container{
+    width: 80%;
+}
